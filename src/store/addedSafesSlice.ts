@@ -81,6 +81,7 @@ export const addedSafesSlice = createSlice({
     },
   },
   extraReducers(builder) {
+    //@ts-ignore
     builder.addCase(safeInfoSlice.actions.set.type, (state, { payload }: PayloadAction<Loadable<SafeInfo>>) => {
       if (!payload.data) {
         return
